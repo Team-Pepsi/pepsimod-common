@@ -19,7 +19,7 @@ import org.springframework.security.crypto.encrypt.BytesEncryptor;
 import org.springframework.security.crypto.encrypt.Encryptors;
 
 public class CryptUtils {
-    public static String salt = "salt!";
+    public static String salt = "aaaaaa";
 
     public static byte[] encrypt(String string, String password) {
         return encrypt(string.getBytes(), password);
