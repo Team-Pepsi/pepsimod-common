@@ -53,7 +53,7 @@ public class CryptUtils {
         return null;
     }
 
-    public static String decryptString(byte[] input, String password)  {
+    public static byte[] decrypt(byte[] input, String password) {
         try {
             byte[] keyBytes = password.getBytes();
             SecretKeySpec key = new SecretKeySpec(keyBytes, "AES");
@@ -61,7 +61,7 @@ public class CryptUtils {
             byte[] plainText = new byte[cipher.getOutputSize(input.length)];
             int ptLength = cipher.update(input, 0, input.length, plainText, 0);
             cipher.doFinal(plainText, ptLength);
-            return new String(plainText);
+            return plainText;
         } catch (Exception e)   {
             e.printStackTrace();
             Runtime.getRuntime().exit(40932);

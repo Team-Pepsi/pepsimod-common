@@ -17,6 +17,7 @@ package team.pepsi.pepsimod.common;
 
 import team.pepsi.pepsimod.common.util.CryptUtils;
 import team.pepsi.pepsimod.common.util.SerializableUtils;
+import team.pepsi.pepsimod.common.util.Zlib;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -26,7 +27,7 @@ public class ServerPepsiModSending implements Serializable  {
     public final byte[] assets;
 
     public ServerPepsiModSending(HashMap<String, byte[]> classes, HashMap<String, byte[]> assets, String hwid)   {
-        this.classes = CryptUtils.encrypt(SerializableUtils.toBytes(classes), hwid);
-        this.assets = CryptUtils.encrypt(SerializableUtils.toBytes(assets), hwid);
+        this.classes = Zlib.deflate(CryptUtils.encrypt(SerializableUtils.toBytes(classes), hwid), 7);
+        this.assets = Zlib.deflate(CryptUtils.encrypt(SerializableUtils.toBytes(assets), hwid), 7);
     }
 }
