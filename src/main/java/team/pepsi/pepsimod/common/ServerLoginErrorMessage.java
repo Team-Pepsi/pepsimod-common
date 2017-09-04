@@ -18,9 +18,9 @@ package team.pepsi.pepsimod.common;
 import java.io.Serializable;
 
 public class ServerLoginErrorMessage implements Serializable {
-    public final int code;
+    public final String error;
 
-    public ServerLoginErrorMessage(int code) {
-        this.code = code;
+    public ServerLoginErrorMessage(String error) {
+        this.error = error;
     }
 }

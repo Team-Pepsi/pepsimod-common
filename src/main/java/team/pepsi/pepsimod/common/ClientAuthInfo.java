@@ -19,14 +19,12 @@ import java.io.Serializable;
 
 public class ClientAuthInfo implements Serializable {
     public final String username;
-    public final String password;
-    public final String authKey;
     public final int nextRequest;
+    public final String hwid;
 
-    public ClientAuthInfo(String username, String password, String authKey, int nextRequest) {
+    public ClientAuthInfo(String username, int nextRequest, String hwid) {
         this.username = username;
-        this.password = password;
-        this.authKey = authKey;
         this.nextRequest = nextRequest;
+        this.hwid = hwid;
     }
 }
