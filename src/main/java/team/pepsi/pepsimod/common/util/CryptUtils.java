@@ -31,7 +31,6 @@ public class CryptUtils {
             return encryptor.encrypt(input);
         } catch (Exception e) {
             e.printStackTrace();
-            Runtime.getRuntime().exit(98473);
         }
 
         return null;
@@ -43,7 +42,6 @@ public class CryptUtils {
             return decryptor.decrypt(input);
         } catch (Exception e) {
             e.printStackTrace();
-            Runtime.getRuntime().exit(40932);
         }
 
         return null;
