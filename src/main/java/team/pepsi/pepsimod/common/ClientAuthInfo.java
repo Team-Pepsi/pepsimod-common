@@ -21,10 +21,12 @@ public class ClientAuthInfo implements Serializable {
     public final String username;
     public final int nextRequest;
     public final String hwid;
+    public final int protocol;
 
-    public ClientAuthInfo(String username, int nextRequest, String hwid) {
+    public ClientAuthInfo(String username, int nextRequest, String hwid, int protocol) {
         this.username = username;
         this.nextRequest = nextRequest;
         this.hwid = hwid;
+        this.protocol = protocol;
     }
 }
