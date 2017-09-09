@@ -17,11 +17,11 @@ package team.pepsi.pepsimod.common;
 
 import java.io.Serializable;
 
-public class ServerLoginErrorMessage implements Serializable {
+public class ServerNotification implements Serializable {
     public final String error;
     public final int code;
 
-    public ServerLoginErrorMessage(String error, int code) {
+    public ServerNotification(String error, int code) {
         this.error = error;
         this.code = code;
     }

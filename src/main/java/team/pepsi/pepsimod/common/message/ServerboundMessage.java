@@ -13,16 +13,16 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package team.pepsi.pepsimod.common;
+package team.pepsi.pepsimod.common.message;
 
 import java.io.Serializable;
 
-public class ServerLoginErrorMessage implements Serializable {
-    public final String error;
-    public final int code;
+public class ServerboundMessage implements Serializable {
+    public final boolean isEncrypted;
+    public final byte[] data;
 
-    public ServerLoginErrorMessage(String error, int code) {
-        this.error = error;
-        this.code = code;
+    public ServerboundMessage(boolean isEncrypted, byte[] data) {
+        this.isEncrypted = isEncrypted;
+        this.data = data;
     }
 }
