@@ -18,6 +18,8 @@ package team.pepsi.pepsimod.common;
 import java.io.Serializable;
 
 public class ServerLoginErrorMessage implements Serializable {
+    private static final long serialVersionUID = 0L;
+
     public final String error;
     public final int code;
 

@@ -18,6 +18,8 @@ package team.pepsi.pepsimod.common;
 import java.io.Serializable;
 
 public class ClientAuthInfo implements Serializable {
+    private static final long serialVersionUID = 0L;
+
     public final String username;
     public final int nextRequest;
     public final String hwid;

@@ -23,6 +23,8 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 public class ServerPepsiModSending implements Serializable  {
+    private static final long serialVersionUID = 0L;
+
     public final byte[] classes;
     public final byte[] assets;
 

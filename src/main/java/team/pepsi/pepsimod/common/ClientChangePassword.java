@@ -18,6 +18,8 @@ package team.pepsi.pepsimod.common;
 import java.io.Serializable;
 
 public class ClientChangePassword implements Serializable {
+    private static final long serialVersionUID = 0L;
+
     public final String newPassword;
 
     public ClientChangePassword(String password) {

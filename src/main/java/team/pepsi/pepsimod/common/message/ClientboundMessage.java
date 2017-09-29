@@ -18,6 +18,8 @@ package team.pepsi.pepsimod.common.message;
 import java.io.Serializable;
 
 public class ClientboundMessage implements Serializable {
+    private static final long serialVersionUID = 0L;
+
     public final boolean isEncrypted;
     public final byte[] data;
 
